@@ -2,7 +2,7 @@ Summary:	Mingw32 GNU binary utility development utilities - DirectX 8.0 API
 Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla Mingw32 - API DirectX 8.0
 Name:		crossmingw32-dx80
 Version:	8.0
-Release:	1
+Release:	2
 License:	Free (libs), (c) Microsoft Corporation (headers)
 Group:		Development/Libraries
 # headers are Copyright (C) 19xx Microsoft Corporation - what about license???
@@ -12,6 +12,7 @@ Source0:	http://alleg.sourceforge.net/files/dx80_mgw.zip
 Source1:	http://www.libsdl.org/extras/win32/common/directx-devel.tar.gz
 # Source1-md5:	389a36e4d209c0a76bea7d7cb6315315
 URL:		http://www.mingw.org/
+Requires:	crossmingw32-runtime
 Provides:	crossmingw32-w32api-dx
 Obsoletes:	crossmingw32-w32api-dx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
