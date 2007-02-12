@@ -1,5 +1,5 @@
 Summary:	Mingw32 GNU binary utility development utilities - DirectX 8.0 API
-Summary(pl.UTF-8):   Skrośne narzędzia programistyczne GNU dla Mingw32 - API DirectX 8.0
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - API DirectX 8.0
 Name:		crossmingw32-dx80
 Version:	8.0
 Release:	2
