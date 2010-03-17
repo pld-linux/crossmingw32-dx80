@@ -14,8 +14,8 @@ Source1:	http://www.libsdl.org/extras/win32/common/directx-devel.tar.gz
 URL:		http://www.mingw.org/
 BuildRequires:	unzip
 Requires:	crossmingw32-runtime
-Provides:	crossmingw32-w32api-dx
-Obsoletes:	crossmingw32-w32api-dx
+Provides:	crossmingw32-dx = 8.0
+Obsoletes:	crossmingw32-dx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target		i386-mingw32
@@ -54,6 +54,7 @@ tar zxf %{SOURCE1}
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{arch}/{include,lib}
 
+rm -rf include/src
 rm -rf lib/src
 
 cp -fa include/* $RPM_BUILD_ROOT%{arch}/include
@@ -66,5 +67,52 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{arch}/include/*
-%{arch}/lib/*
+%{arch}/include/d3d*.h
+%{arch}/include/d3d*.inl
+%{arch}/include/ddraw*.h
+%{arch}/include/ddstream.h
+%{arch}/include/dinput*.h
+%{arch}/include/directx.h
+%{arch}/include/dls1.h
+%{arch}/include/dls2.h
+%{arch}/include/dmdls.h
+%{arch}/include/dmerror.h
+%{arch}/include/dmksctrl.h
+%{arch}/include/dmo*.h
+%{arch}/include/dmplugin.h
+%{arch}/include/dmus*.h
+%{arch}/include/dpaddr.h
+%{arch}/include/dplay*.h
+%{arch}/include/dplobby*.h
+%{arch}/include/dsetup.h
+%{arch}/include/dshow.h
+%{arch}/include/dshowasf.h
+%{arch}/include/dsound.h
+%{arch}/include/dv.h
+%{arch}/include/dvdevcod.h
+%{arch}/include/dvdmedia.h
+%{arch}/include/dvoice.h
+%{arch}/include/dvp.h
+%{arch}/include/dx7todx8.h
+%{arch}/include/dxerr8.h
+%{arch}/include/dxfile.h
+%{arch}/include/dxsdk.inc
+%{arch}/include/dxtrans.h
+%{arch}/include/dxva.h
+%{arch}/include/multimon.h
+%{arch}/include/rmxfguid.h
+%{arch}/include/rmxftmpl.h
+%{arch}/lib/libd3d8.a
+%{arch}/lib/libd3dx8d.a
+%{arch}/lib/libd3dxof.a
+%{arch}/lib/libddraw.a
+%{arch}/lib/libdinput.a
+%{arch}/lib/libdinput8.a
+%{arch}/lib/libdplayx.a
+%{arch}/lib/libdpnaddr.a
+%{arch}/lib/libdpnet.a
+%{arch}/lib/libdpnlobby.a
+%{arch}/lib/libdpvoice.a
+%{arch}/lib/libdsetup.a
+%{arch}/lib/libdsound.a
+%{arch}/lib/libdxguid.a
